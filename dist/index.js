@@ -1,36 +1,5 @@
+"use strict";var d=function(a,r){return function(){try{return r||a((r={exports:{}}).exports,r),r.exports}catch(e){throw (r=0, e)}};};var n=d(function(m,v){
+var q=require('@stdlib/ndarray-base-numel-dimension/dist'),i=require('@stdlib/ndarray-base-stride/dist'),t=require('@stdlib/ndarray-base-offset/dist'),u=require('@stdlib/ndarray-base-data-buffer/dist'),c=require('@stdlib/ndarray-base-ndarraylike2scalar/dist'),l=require('@stdlib/blas-ext-base-dleft-pad-circular/dist').ndarray;function f(a){var r=a[0],e=a[1],s=c(a[2]);return l(q(r,0),s,u(r),i(r,0),t(r),u(e),i(e,0),t(e)),e}v.exports=f
+});var o=n();module.exports=o;
 /** @license Apache-2.0 */
-
-'use strict';
-
-/**
-* Prepend elements to a one-dimensional double-precision floating-point input ndarray by circularly repeating existing elements and write the results to a one-dimensional double-precision floating-point output ndarray.
-*
-* @module @stdlib/blas-ext-base-ndarray-dleft-pad-circular
-*
-* @example
-* var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
-* var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
-* var dleftPadCircular = require( '@stdlib/blas-ext-base-ndarray-dleft-pad-circular' );
-*
-* var x = new Float64Vector( [ 1.0, 2.0, 3.0, 4.0 ] );
-* var y = new Float64Vector( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
-*
-* var k = scalar2ndarray( 6, {
-*     'dtype': 'generic'
-* });
-*
-* var z = dleftPadCircular( [ x, y, k ] );
-* // returns <ndarray>[ 3.0, 4.0, 1.0, 2.0, 3.0, 4.0, 1.0, 2.0, 3.0, 4.0 ]
-*
-* var bool = ( z === y );
-* // returns true
-*/
-
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+//# sourceMappingURL=index.js.map
